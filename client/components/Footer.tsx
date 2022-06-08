@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 
 const FooterContainer = styled.footer`
@@ -108,7 +108,10 @@ const Footer = () => {
 			<ul className="footer_info">
 				<li>
 					<Link href="/" style={{ textDecoration: "none" }}>
-						<div>EveryFootball</div>
+						<img
+							src="https://github.com/codestates/everyfootball/blob/main/client/src/Components/Mainpage/logo.png?raw=true"
+							style={{ width: 250, height: 100, objectFit: "cover" }}
+						/>
 					</Link>
 				</li>
 				<li>Copyright @ 2022 All right Reserved</li>
@@ -118,24 +121,40 @@ const Footer = () => {
 					<li id="github_title">TEAM MEMBERS</li>
 					<li className="footer_github_members">
 						<div>
-							{/* <a href="https://github.com/codestates/Momukzzi" target="_blank"> */}
-							{/* <BsGithub className="github_icons" /> */}
-							{/* </a> */}
+							<div
+								onClick={() =>
+									window.open("https://github.com/kimyounlim/EveryFootball")
+								}
+							>
+								<BsGithub
+									className="github_icons"
+									style={{ cursor: "pointer" }}
+								/>
+							</div>
 						</div>
 						<div className="footer_github_members_name">
-							{/* <a href="https://github.com/EuilimChoi" target="_blank"> */}
-							최의림
-							{/* </a> */}
+							<div
+								onClick={() => window.open("https://github.com/EuilimChoi")}
+								style={{ cursor: "pointer" }}
+							>
+								최의림
+							</div>
 						</div>
 						<div className="footer_github_members_name">
-							{/* <a href="https://github.com/yomae" target="_blank"> */}
-							김여명
-							{/* </a> */}
+							<div
+								onClick={() => window.open("https://github.com/yomae")}
+								style={{ cursor: "pointer" }}
+							>
+								김여명
+							</div>
 						</div>
 						<div className="footer_github_members_name">
-							{/* <a href="https://github.com/hyukzz" target="_blank"> */}
-							정윤혁
-							{/* </a> */}
+							<div
+								onClick={() => window.open("https://github.com/hyukzz")}
+								style={{ cursor: "pointer" }}
+							>
+								정윤혁
+							</div>
 						</div>
 					</li>
 				</ul>
