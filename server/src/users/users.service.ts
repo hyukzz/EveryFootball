@@ -41,7 +41,7 @@ export class UsersService {
     const check_password = await this.usersRepository.findOne({user_id : users.user_id, password : users.password})
     if(check_id){
       if(check_password){
-        const payload = {user_id : check_id.user_id, email : check_id.email}
+        const payload = {id: check_id.id, user_id : check_id.user_id, email : check_id.email}
         return {accessToken: this.jwtService.sign(payload)}
         
       }else{
@@ -100,7 +100,7 @@ export class UsersService {
     const token = header.rawHeaders[1].split(" ")[1]
     const verify = this.jwtService.verify(token, {secret: "1234"})
     const targetuser = await this.usersRepository.findOne({user_id : verify.user_id})
-    const targetmatch = await this.playerInMatchRepository.find({user : verify.user_id})
+    const targetmatch = await this.playerInMatchRepository.find({userid : verify.id})
     if(!targetuser){
       throw new HttpException('유효하지 않은 정보입니다. 다시 로그인해주세요', HttpStatus.BAD_REQUEST)
     }else{
