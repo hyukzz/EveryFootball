@@ -3,13 +3,15 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
+	color: white;
+	font-size: 40px;
 	margin: 0 auto;
 	.navbar {
 		height: 100px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: #f1c83e;
+		background-color: #3e3e3e;
 		padding: 9px 12px;
 		min-width: 564px;
 
@@ -72,7 +74,7 @@ const HeaderContainer = styled.div`
 	}
 
 	.navbar_menu li > div {
-		color: #533026;
+		color: white;
 	}
 
 	.navbar_link {
@@ -113,8 +115,11 @@ function Header() {
 		<HeaderContainer>
 			<nav className="navbar">
 				<div className="navbar_logo">
-					<Link href="/">
-						<a>로고</a>
+					<Link href="/" style={{ textDecoration: "none" }}>
+						<img
+							src="https://github.com/codestates/everyfootball/blob/main/client/src/Components/Mainpage/logo.png?raw=true"
+							style={{ width: 250, height: 100, objectFit: "cover" }}
+						/>
 					</Link>
 				</div>
 				<ul className="navbar_menu">
