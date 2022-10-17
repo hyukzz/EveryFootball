@@ -7,7 +7,7 @@ import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../states/common";
 import Link from "next/link";
 
-const login = () => {
+const Login = () => {
   const router = useRouter();
 
   const { value: id, valueChangeHandler: setId } = useInput();
@@ -46,7 +46,7 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
 
 const LoginContainer = styled.div`
   max-width: 600px;
