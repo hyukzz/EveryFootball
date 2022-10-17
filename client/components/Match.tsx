@@ -49,7 +49,6 @@ function Match() {
 
 	return (
 		<>
-			{/*요일 별 경기일정*/}
 			<DatesList>
 				<SwiperItems>
 					<SwiperItem
@@ -117,7 +116,6 @@ function Match() {
 				</SwiperItems>
 			</DatesList>
 			<SocialList>
-				{/*경기 일정 리스트*/}
 				<MatchContainer>
 					<Matches>
 						{matches?.map((item: matchDataType) => (

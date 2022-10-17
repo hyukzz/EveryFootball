@@ -1,4 +1,4 @@
-interface matchData {
+export interface matchDataType {
 	id: number;
 	title: string;
 	time: string;
@@ -7,9 +7,11 @@ interface matchData {
 	level: string;
 	people: string;
 	propose: boolean;
+	date: string;
+	day: string;
 }
 
-const matchData = [
+export const matchData = [
 	{
 		id: 1,
 		title: "용산 더베이스 5구장(뮌헨)",
@@ -19,6 +21,8 @@ const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
+		date: "17",
+		day: "월",
 	},
 
 	{
@@ -30,6 +34,8 @@ const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: true,
+		date: "17",
+		day: "월",
 	},
 
 	{
@@ -41,6 +47,8 @@ const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
+		date: "17",
+		day: "월",
 	},
 
 	{
@@ -52,6 +60,8 @@ const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: true,
+		date: "18",
+		day: "화",
 	},
 
 	{
@@ -63,6 +73,8 @@ const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: false,
+		date: "19",
+		day: "수",
 	},
 	{
 		id: 6,
@@ -73,6 +85,8 @@ const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
+		date: "20",
+		day: "목",
 	},
 
 	{
@@ -84,6 +98,8 @@ const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: true,
+		date: "20",
+		day: "목",
 	},
 
 	{
@@ -95,6 +111,8 @@ const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
+		date: "21",
+		day: "금",
 	},
 
 	{
@@ -106,6 +124,8 @@ const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: true,
+		date: "22",
+		day: "토",
 	},
 
 	{
@@ -117,7 +137,7 @@ const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: false,
+		date: "22",
+		day: "토",
 	},
 ];
-
-export default matchData;
