@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import DatePicker from "react-datepicker";
+import moment from "moment";
+import "react-datepicker/dist/react-datepicker.css";
+import { FiCalendar } from "react-icons/fi";
 
 import { matchData, matchDataType } from "../assets/matchData";
 import MatchItem from "./MatchItem";
 
-function Match() {
+const Match = () => {
 	const [matches, setMatches] = useState(matchData);
+	const [selectDate, setSelectDate] = useState(new Date());
 	const [category, setCategory] = useState("모든 요일");
 
+	useEffect(() => {
+		if (moment(selectDate).format("LL")) {
+			const filteredProducts = matchData.filter(
+				item => item.date === moment(selectDate).format("LL")
+			);
+			setMatches(filteredProducts);
+		}
+	}, [selectDate]);
+	console.log(selectDate);
 	useEffect(() => {
 		if (category === "모든 요일") {
 			setMatches(matchData);
@@ -49,8 +63,22 @@ function Match() {
 
 	return (
 		<>
-			{/*요일 별 경기일정*/}
 			<DatesList>
+				<SwiperItems>
+					<SwiperItem>
+						<DatePicker
+							dateFormat="yyyy/MM/dd(eee)"
+							selected={selectDate}
+							value={selectDate}
+							minDate={new Date()}
+							onChange={date => setSelectDate(date)}
+							popperPlacement="auto"
+							customInput={
+								<FiCalendar style={{ marginRight: "7px", cursor: "pointer" }} />
+							}
+						/>
+					</SwiperItem>
+				</SwiperItems>
 				<SwiperItems>
 					<SwiperItem
 						className={category === "모든 요일" ? "check" : "none-check"}
@@ -116,8 +144,8 @@ function Match() {
 					</SwiperItem>
 				</SwiperItems>
 			</DatesList>
+
 			<SocialList>
-				{/*경기 일정 리스트*/}
 				<MatchContainer>
 					<Matches>
 						{matches?.map((item: matchDataType) => (
@@ -128,8 +156,7 @@ function Match() {
 			</SocialList>
 		</>
 	);
-}
-
+};
 export default Match;
 
 const SocialList = styled.div`

@@ -18,6 +18,7 @@ function MatchItem({ item }) {
 					<Tag>{people}</Tag>
 					<Tag className="anotherTag">{gender}</Tag>
 					<Tag className="anotherTag">{level}</Tag>
+					<Tag className="anotherTag">{category}</Tag>
 				</Tags>
 			</MiddleSection>
 			<RightSection>
@@ -42,9 +43,7 @@ const MatchItemContainer = styled.div`
 	display: flex;
 	padding: 16px 0;
 	cursor: pointer;
-	/* border-top: 1px solid hsla(0, 0%, 100%, 0.2); */
-	border-top: 1px solid black;
-
+	border-top: 1px solid grey;
 	&:first-child {
 		border-top: white;
 	}
@@ -60,11 +59,11 @@ const LeftSection = styled.div`
 
 const Time = styled.div`
 	font-family: NotoSansKR, sans-serif;
-	/* color: #fff; */
 	color: black;
 	font-size: 15px;
 	font-weight: 600;
 	line-height: 1em;
+	user-select: none;
 `;
 
 const MiddleSection = styled.div`
@@ -77,7 +76,6 @@ const MiddleSection = styled.div`
 const Title = styled.div`
 	position: relative;
 	font-family: NotoSansKR, sans-serif;
-	/* color: #fff; */
 	color: black;
 	font-size: 16px;
 	font-weight: 500;
@@ -88,6 +86,7 @@ const Title = styled.div`
 const Tags = styled.div`
 	margin-top: 8px;
 	display: flex;
+	user-select: none;
 `;
 
 const Tag = styled.div`
@@ -95,7 +94,6 @@ const Tag = styled.div`
 	-webkit-box-align: center;
 	align-items: center;
 	font-family: NotoSansKR, sans-serif;
-	/* color: #fff; */
 	color: black;
 	font-size: 11px;
 	font-weight: 400;
@@ -134,8 +132,7 @@ const ProposeButton = styled.div`
 	display: flex;
 	align-items: center;
 	background-color: grey;
-	//신청 가능할 때     background-color: #0091ff;
-	//신청 마감일 때     background-color: grey
+	user-select: none;
 `;
 
 const ProposeStatus = styled.div`
