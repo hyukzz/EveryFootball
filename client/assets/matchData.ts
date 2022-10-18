@@ -21,7 +21,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
-		date: "17",
+		date: "October 17, 2022",
 		day: "월",
 	},
 
@@ -34,7 +34,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: true,
-		date: "17",
+		date: "October 17, 2022",
 		day: "월",
 	},
 
@@ -47,7 +47,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
-		date: "17",
+		date: "October 17, 2022",
 		day: "월",
 	},
 
@@ -60,7 +60,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: true,
-		date: "18",
+		date: "October 18, 2022",
 		day: "화",
 	},
 
@@ -73,7 +73,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: false,
-		date: "19",
+		date: "October 19, 2022",
 		day: "수",
 	},
 	{
@@ -85,7 +85,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
-		date: "20",
+		date: "October 20, 2022",
 		day: "목",
 	},
 
@@ -98,7 +98,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: true,
-		date: "20",
+		date: "October 20, 2022",
 		day: "목",
 	},
 
@@ -111,7 +111,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: false,
-		date: "21",
+		date: "October 21, 2022",
 		day: "금",
 	},
 
@@ -124,7 +124,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "6vs6",
 		propose: true,
-		date: "22",
+		date: "October 22, 2022",
 		day: "토",
 	},
 
@@ -137,7 +137,7 @@ export const matchData = [
 		level: "실력무관",
 		people: "5vs5",
 		propose: false,
-		date: "22",
+		date: "October 22, 2022",
 		day: "토",
 	},
 ];
