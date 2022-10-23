@@ -1,19 +1,15 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Carousel from "../components/carousel";
+import Layout from "../components/common/Layout";
+import ImageSlide from "../components/ImageSlide";
 import Match from "../components/Match";
 
-function Home() {
-	return (
-		<div>
-			<div>
-				<Header />
-				<Carousel />
-				<Match />
-				<Footer />
-			</div>
-		</div>
-	);
-}
+const Home = () => {
+  return (
+    <Layout>
+      <ImageSlide />
+      <Match />
+    </Layout>
+  );
+};
+
 export default Home;

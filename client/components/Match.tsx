@@ -162,44 +162,44 @@ const Match = () => {
 export default Match;
 
 const SocialList = styled.div`
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 `;
 
 const MatchContainer = styled.div`
-	display: block;
-	box-sizing: border-box;
-	padding: 0 16px;
-	margin: 0 auto;
-	max-width: 900px;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 16px;
+  margin: 0 auto;
+  max-width: 900px;
 `;
 
 const Matches = styled.div`
-	display: block;
-	color: #fff;
+  display: block;
+  color: #fff;
 `;
 
 const DatesList = styled.div`
-	width: 100%;
-	margin: 0 auto;
-	max-width: 900px;
-	display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
 `;
 
 const SwiperItems = styled.div`
-	margin: 0 auto;
+  margin: 0 auto;
 `;
 
 const SwiperItem = styled.div`
-	margin-top: 30px;
-	margin-bottom: 30px;
-	padding-left: 15px;
-	user-select: none;
-	&.check {
-		background: #fff !important;
-		color: #df2020 !important;
-	}
-	&.none-check {
-		cursor: pointer;
-	}
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  user-select: none;
+  &.check {
+    background: #fff !important;
+    color: #df2020 !important;
+  }
+  &.none-check {
+    cursor: pointer;
+  }
 `;
