@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-function MatchItem({ item }) {
+const MatchItem = ({ item }) => {
 	const router = useRouter();
 
 	const { id, title, time, gender, level, category, people, propose } = item;
@@ -34,7 +34,7 @@ function MatchItem({ item }) {
 			</RightSection>
 		</MatchItemContainer>
 	);
-}
+};
 
 export default MatchItem;
 

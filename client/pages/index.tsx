@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Carousel from "../components/carousel";
-import MatchInfo from "../components/matchInfo";
+import Match from "../components/Match";
 
 function Home() {
 	return (
@@ -10,7 +10,7 @@ function Home() {
 			<div>
 				<Header />
 				<Carousel />
-				<MatchInfo />
+				<Match />
 				<Footer />
 			</div>
 		</div>

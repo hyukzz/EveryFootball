@@ -3,6 +3,8 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
+	margin: 0 auto;
+	max-width: 900px;
 	color: white;
 	font-size: 40px;
 	margin: 0 auto;

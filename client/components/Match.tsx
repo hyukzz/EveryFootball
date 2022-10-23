@@ -7,6 +7,7 @@ import { FiCalendar } from "react-icons/fi";
 
 import { matchData, matchDataType } from "../assets/matchData";
 import MatchItem from "./MatchItem";
+import Search from "./Search";
 
 const Match = () => {
 	const [matches, setMatches] = useState(matchData);
@@ -21,7 +22,7 @@ const Match = () => {
 			setMatches(filteredProducts);
 		}
 	}, [selectDate]);
-	console.log(selectDate);
+
 	useEffect(() => {
 		if (category === "모든 요일") {
 			setMatches(matchData);
@@ -63,6 +64,7 @@ const Match = () => {
 
 	return (
 		<>
+			<Search />
 			<DatesList>
 				<SwiperItems>
 					<SwiperItem>
