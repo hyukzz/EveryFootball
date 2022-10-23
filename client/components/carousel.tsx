@@ -34,9 +34,8 @@ function Carousel() {
 export default Carousel;
 
 const ProductImgWrap = styled.div`
-	width: 50%;
-	height: 50%;
 	border-radius: 10px;
+	max-width: 900px;
 	margin: 0 auto;
 	padding-top: 20px;
 `;

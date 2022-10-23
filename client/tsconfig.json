@@ -10,8 +10,10 @@
 		"incremental": true,
 		"esModuleInterop": true,
 		"module": "esnext",
+		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
+		"moduleResolution": "node",
 		"jsx": "preserve"
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

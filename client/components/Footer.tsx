@@ -3,13 +3,12 @@ import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 
 const FooterContainer = styled.footer`
+	margin: 0 auto;
+	max-width: 900px;
 	display: flex;
 	border: 1px solid black;
-	height: 150px;
 	background-color: #3e3e3e;
 	color: white;
-	margin-top: 50px;
-	min-width: 660px;
 
 	.footer_info {
 		list-style-type: none;
