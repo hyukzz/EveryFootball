@@ -3,15 +3,20 @@ import styled from "styled-components";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { matchData, matchDataType } from "../assets/matchData";
 import Link from "next/link";
+import MatchItem from "./MatchItem";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { isKeywordAtom } from "../states/common";
+import District from "../pages/district/[id]";
 
 const Search = () => {
 	const [matches, setMatches] = useState(matchData);
 	const [filteredData, setFilteredData] = useState([]);
-	const [wordEntered, setWordEntered] = useState("");
+	const [wordEntered, setWordEntered] = useRecoilState(isKeywordAtom);
 
 	const handleFilter = event => {
 		const searchWord = event.target.value;
 		setWordEntered(searchWord);
+
 		const newFilter = matches.filter(value => {
 			return value.category.toLowerCase().includes(searchWord.toLowerCase());
 		});
@@ -39,26 +44,30 @@ const Search = () => {
 					/>
 				</SearchContainer>
 				{filteredData.length != 0 && (
-					<div className="dataResult">
-						{filteredData.slice(0, 1).map((value, i) => {
+					<DateResult>
+						{filteredData.slice(0, 1).map((item, i) => {
 							return (
 								<div key={i}>
 									<Link
-										href="/district/[id]"
-										as={`/district/${value.category}`}
+										href={{
+											pathname: `/district/[id]`,
+											query: { wordEntered: wordEntered },
+										}}
+										as={`/district/${item.category}`}
 									>
-										<p>{value.category} </p>
+										<DateItem>
+											<p>{item.category}</p>
+										</DateItem>
 									</Link>
+									{/* {matches?.map((item: matchDataType) => (
+										<MatchItem item={item} key={item.id} />
+									))} */}
 								</div>
 							);
 						})}
-					</div>
+					</DateResult>
 				)}
 			</form>
-
-			{/* {matches?.map((item: matchDataType) => (
-				<MatchItem item={item} key={item.id} />
-			))} */}
 		</>
 	);
 };
@@ -74,6 +83,7 @@ const SearchContainer = styled.div`
 	border-radius: 6px;
 	height: 30px;
 	margin-top: 15px;
+	margin-bottom: 10px;
 `;
 
 const Input = styled.input`
@@ -85,4 +95,32 @@ const Input = styled.input`
 	width: calc(100% - 60px);
 	padding: 0px;
 	line-height: 24px;
+`;
+
+const DateResult = styled.div`
+	width: 350px;
+	height: 50px;
+	margin-top: 5px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	overflow: hidden;
+	overflow-y: auto;
+	margin: 0 auto;
+	cursor: pointer;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&:hover {
+		background-color: lightgrey;
+	}
+`;
+
+const DateItem = styled.div`
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	color: black;
+	margin-left: 10px;
+	text-decoration: none;
 `;
