@@ -52,6 +52,6 @@ Everyfootball에서는...
 | 팀장 | 최의림 | BACK-END | [euilimchoi](https://github.com/EuilimChoi)   |
 | 팀원 | 정윤혁 | FRONT-END | [hyukzz](https://github.com/hyukzz)    |
 | 팀원 | 김여명 | FRONT-END  | [yomae](https://github.com/yomae)       |
-| 팀원 | 강호중 | FRONT-END  | [rkdghwnd](https://github.com/rkdghwnd)       |
+
 
   
